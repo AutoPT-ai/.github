@@ -1,30 +1,40 @@
 # AegisMind Labs
 
-**Building observable, evaluable, and evolvable AI agents for cybersecurity.**
+**让智能体在真实安全环境中被观察、被评估、持续进化。**
 
-AegisMind Labs is an AI security team exploring how autonomous agents can operate, learn, and improve in real security workflows. We focus on turning agent behavior into evidence that can be observed, evaluated, and used for continuous improvement.
+AegisMind Labs 是一个专注于 AI 与网络安全的团队。我们关注自主智能体如何理解安全任务、使用工具、响应环境反馈并持续改进，致力于让智能体的行为可观测、能力可评估、优化有依据。
 
-AegisMind Labs 是一个专注于 AI 与网络安全的团队。我们关注自主 Agent 如何在真实安全工作流中行动、学习与持续进化，并致力于让 Agent 的行为可观测、能力可评估、优化有依据。
+## 玄鉴 XUANJIAN
 
-## XUANJIAN / 玄鉴
+<p align="center">
+  <img src="./assets/xuanjian-platform.png" alt="玄鉴平台首页" width="100%">
+</p>
 
-**See how security agents act. Understand why they succeed. Improve what comes next.**
+**观其攻防，鉴其锋芒。**
 
-XUANJIAN is an AI-agent platform for automated penetration testing. It runs agents in controlled security tasks and transforms their observable behavior - tool calls, environment interactions, feedback, failures, and corrections - into structured evidence for inspection, evaluation, and improvement.
+玄鉴是面向自动化渗透测试智能体的攻防观测与评估平台。平台通过受控的真实漏洞环境和自动判题，检验智能体的自主渗透、漏洞利用与解题能力，并完整记录每一次任务中的工具调用、环境交互、执行反馈、失败与修正。
 
-玄鉴（XUANJIAN）是一个面向自动化渗透测试的 AI Agent 平台。它让 Agent 在受控的真实安全任务中运行，并将工具调用、环境交互、执行反馈、失败与修正等可观测行为转化为结构化证据，用于检查、评估与持续优化。
+玄鉴关注的不只是智能体最终是否完成任务，更关注结果是如何产生的：
 
-### From outcomes to evidence
+- 在可复现的安全任务中运行和验证智能体
+- 实时观察行为轨迹、工具调用与环境反馈
+- 检查关键步骤背后的执行证据与上下文
+- 通过可回放、可分析的过程持续改进智能体及其运行框架
 
-- **Run** agents against reproducible security tasks.
-- **Observe** behavior paths, tool use, and environment feedback as they happen.
-- **Inspect** the evidence behind each important action and outcome.
-- **Improve** agents and their harnesses through replayable, evidence-based analysis.
+## 让结果背后的过程可见
 
-> XUANJIAN is not a larger collection of challenges. It is infrastructure for understanding and improving autonomous penetration-testing agents.
->
-> 玄鉴不是更大的题库，而是理解和改进自动化渗透测试 Agent 的进化基础设施。
+<p align="center">
+  <img src="./assets/xuanjian-agent-analysis.png" alt="玄鉴智能体行为轨迹与证据分析" width="100%">
+</p>
 
-XUANJIAN is under active development. Research discussions and collaboration are welcome.
+一次成功不足以说明智能体真正具备稳定的安全能力。只有看清它如何探索目标、选择工具、理解反馈、走入错误路径并完成修正，我们才能判断能力从何而来，又该如何继续提升。
 
-玄鉴仍在持续建设中，欢迎围绕 AI Agent 与网络安全展开交流与合作。
+玄鉴将这些可观测行为组织为结构化轨迹，并把关键动作与工具结果、环境证据和运行上下文关联起来，让一次自动化渗透测试从单一结果转变为可检查、可复盘、可比较的过程。
+
+> **玄鉴不是更大的题库，而是自动化渗透测试智能体的进化基础设施。**
+
+## 我们的方向
+
+AegisMind Labs 将持续探索 AI 智能体在网络安全领域的真实能力边界，围绕行为观测、过程评估、运行框架与持续优化建设更可靠的基础设施。
+
+玄鉴仍在持续建设中，欢迎安全研究者、智能体开发者与靶场作者参与交流与共创。
