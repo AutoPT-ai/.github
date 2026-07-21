@@ -1,36 +1,30 @@
-# AutoPT
+# AegisMind Labs
 
-**让 AI Agent 学会渗透,并让它的每一步推理可被观察、可被评审。**
+**Building observable, evaluable, and evolvable AI agents for cybersecurity.**
 
-AutoPT 是一套面向 AI Agent 的攻防训练与观测平台。我们相信下一代渗透测试由 Agent 驱动,但"Agent 能不能打题"只是起点——真正的价值在于**看清它是怎么想的、在哪一步走通或走死、多个 Agent 如何协作**。AutoPT 把靶场、判题和推理观测合为一体,同时坚持 **BYOK(自带模型)**:你的模型 key 与原始流量永不离开本机,平台只接收脱敏后的推理用于分析。
+AegisMind Labs is an AI security team exploring how autonomous agents can operate, learn, and improve in real security workflows. We focus on turning agent behavior into evidence that can be observed, evaluated, and used for continuous improvement.
 
-## 我们的产品
+AegisMind Labs 是一个专注于 AI 与网络安全的团队。我们关注自主 Agent 如何在真实安全工作流中行动、学习与持续进化，并致力于让 Agent 的行为可观测、能力可评估、优化有依据。
 
-AutoPT 由两个相互配合的开源项目组成:
+## XUANJIAN / 玄鉴
 
-| 项目 | 角色 | 技术栈 |
-| --- | --- | --- |
-| **[Pentest-Range](https://github.com/AutoPT-ai/Pentest-Range)** | **平台 / 服务端**——自管用户、题目目录、Flag 判定与 Docker/Compose 靶机;把上报的脱敏 trace 投影成多 Agent 解题过程图(框架无关:Claude Code / LangGraph / OpenAI 兼容均适用) | Python · React |
-| **[AutoPT-relay](https://github.com/AutoPT-ai/AutoPT-relay)** | **本机中转**——夹在 Agent 与模型渠道之间,原样转发流量、异步回传脱敏推理。提供无头 CLI 与 Tauri 桌面 App | Rust · Tauri · Svelte |
+**See how security agents act. Understand why they succeed. Improve what comes next.**
 
-## 它们如何协作
+XUANJIAN is an AI-agent platform for automated penetration testing. It runs agents in controlled security tasks and transforms their observable behavior - tool calls, environment interactions, feedback, failures, and corrections - into structured evidence for inspection, evaluation, and improvement.
 
-```
-   AI Agent ──HTTP──▶  AutoPT Relay  ──▶  你自己的模型渠道
- (你的机器)               (你的机器)         (api.anthropic.com 等)
-                            │
-                            └──(异步 · 脱敏 trace)──▶  Pentest-Range 平台
-                                                          │
-   Agent ──AutoPT API Key + MCP──────────────────────────┤ 列题 / 启靶机 / 判 Flag
-                                                          └─▶ 多 Agent 过程图 · AI 评审
-```
+玄鉴（XUANJIAN）是一个面向自动化渗透测试的 AI Agent 平台。它让 Agent 在受控的真实安全任务中运行，并将工具调用、环境交互、执行反馈、失败与修正等可观测行为转化为结构化证据，用于检查、评估与持续优化。
 
-- **Relay 是边缘,Range 是大脑。** Relay 在你本机透传模型流量、在源头脱敏;Range 在服务端完成判题,并把脱敏推理还原成泳道图、关键路径与诊断。
-- **平台不在模型路径上、不持有任何模型 key。** 这是 AutoPT 的根本设计约束,也是两个项目分立的原因。
+### From outcomes to evidence
 
-## 从哪里开始
+- **Run** agents against reproducible security tasks.
+- **Observe** behavior paths, tool use, and environment feedback as they happen.
+- **Inspect** the evidence behind each important action and outcome.
+- **Improve** agents and their harnesses through replayable, evidence-based analysis.
 
-- 想**搭一套靶场**:看 [Pentest-Range](https://github.com/AutoPT-ai/Pentest-Range) 的 README(`make up` 一键部署)。
-- 想**接入自己的 Agent / 上报推理**:看 [AutoPT-relay](https://github.com/AutoPT-ai/AutoPT-relay),桌面 App 或 CLI 二选一。
+> XUANJIAN is not a larger collection of challenges. It is infrastructure for understanding and improving autonomous penetration-testing agents.
+>
+> 玄鉴不是更大的题库，而是理解和改进自动化渗透测试 Agent 的进化基础设施。
 
-> 现状:pre-1.0,功能快速演进中。欢迎 Issue 与 PR。
+XUANJIAN is under active development. Research discussions and collaboration are welcome.
+
+玄鉴仍在持续建设中，欢迎围绕 AI Agent 与网络安全展开交流与合作。
